@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body id="tipal">
+    <div class="container" id="animated-container">
+        <div class="animasi" id="animasi">
+            <center><img class="gif" src="img/tenor.gif" alt="gif"></center>
+            <div class="form-container">
+                <center><label for="nama" style="color: #fff; font-weight: bold; font-family: Poppins, sans-serif;">Masukkan nama kamu</label></center>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama kamu">
+                <center><button type="button" onclick="validateForm()">Next</button></center>
+                <p class="error-message" id="error-message"></p>
+            </div>
+        </div>
+    
+        <div id="loading-container">
+            <div id="loading"></div>
+            <p style="color: #fff; font-weight: bold; font-family: Poppins, sans-serif;">Tunggu</p>
+        </div>
+
+        <audio id="backgroundMusic" autoplay loop>
+            <source src="img/musik.mp3" type="audio/mp3">
+        </audio>
+    
+        <section class="hal1" id="hal1" style="display: none;">
+            <center>
+                <div class="card1">
+                    <img class="gif-hal1" src="img/a.gif" alt="hal1">
+                    <p id="namaTampil"></p>
+                </div>
+            </center>
+        </section>
+    
+        <section class="hal2" id="hal2" style="display: none;">
+            <center>
+                <div class="card2">
+                    <img class="gif-hal2" src="img/b.gif" alt="hal2" style="margin-right: 25px;">
+                    <p style="color: #fff; font-weight: bold; font-family: Poppins, sans-serif;">Hallo, Apa kabar?</p>
+                </div>
+            </center>
+        </section>
+
+        <section class="hal3" id="hal3" style="display: none;">
+            <center>
+                <div class="card3">
+                    <img class="gif-hal3" src="img/c.gif" alt="hal3">
+                    <p style="color: #fff; font-weight: bold; font-family: Poppins, sans-serif;">Semoga hari kamu menyenangkan ya</p>
+                </div>
+            </center>
+        </section>
+
+        <section class="hal4" id="hal4" style="display: none;">
+            <center>
+                <div class="card3">
+                    <img class="gif-hal3" src="img/e.gif" alt="hal3">
+                    <p style="color: #fff; font-weight: bold; font-family: Poppins, sans-serif;">Selalu semangat kuliahnya hehe</p>
+                </div>
+            </center>
+        </section>
+
+        <section class="hal5" id="hal5" style="display: none;">
+            <center>
+                <div class="card3">
+                    <img class="gif-hal3" src="img/d.gif" alt="hal3" style="margin-right: 25px;">
+                    <p id="namaTampil2"></p>
+                    <button class="next" onclick="showHal6()">Lihat</button>
+                </div>
+            </center>
+        </section>
+        
+        <section class="hal6" id="hal6" style="display: none;">
+            <center>
+                <div class="card3">
+                    <img class="gif-hal3" src="img/f.gif" alt="hal3">
+                    <p style="color: #fff; font-family: Poppins, sans-serif;">Kamu luar biasa, selalu bikin hari lebih cerah.
+                    Sulit apa pun yang kita hadapi, kita bisa lewati bareng.
+                    Ingat, kita pasangan yang kuat, selalu saling dukung.
+                    Semangat terus, yakin deh, semuanya bakal baik-baik aja <span id="namaTampil3"></span>!</p>
+                </div>
+            </center>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var container = document.getElementById("animated-container");
+            container.classList.add("fade-in");
+        });
+    </script>
+    <script src="scrip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.js"></script>
+    <script src="vanta.net.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            VANTA.NET({
+                el: "#tipal",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x3fafff,
+                backgroundColor: 0x0,
+                maxDistance: 21.00
+            });
+        });
+    </script>
+</body>
+
+</html>
